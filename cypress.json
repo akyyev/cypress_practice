@@ -1,0 +1,12 @@
+{
+  "defaultCommandTimeout": 6000,
+  "modifyObstructiveCode": true,
+  "experimentalSourceRewriting": true,
+  "chromeWebSecurity": true,
+  "__comment2__": "These configurations are important...",
+  "env": {
+    "angular_practice_url": "https://rahulshettyacademy.com/angularpractice/",
+    "store_url": ""
+  },
+  "projectId": "q28syo"
+}

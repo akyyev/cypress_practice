@@ -1,0 +1,78 @@
+What is Cypress?
+
+Cypress is a next generation front end Automation testing tool built for the modern web applications
+
+How Cypress is Unique from other Automation tools?
+
+Cypress automatically waits for commands and assertions before moving on. No more async hell.
+
+Ability to test Edge Testcases by Mocking the server response
+
+Cypress takes snapshots as your tests run. We can hover over each commands in the Command Log to see exactly what happened at each step.
+
+Because of its Architectural design, Cypress delivers fast, consistent and reliable test execution compared to other Automation tools
+
+View videos of your entire tests execution when run from the Cypress Dashboard.
+
+*******************************************************************************************
+
+Cypress built on Node.js and comes packaged as an npm module,
+
+As it is built on Node.js, It uses JavaScript for writing tests. But 90% of coding can be done using Cypress inbuilt commands which are easy to understand.
+
+Cypress also bundles with jQuery and inherits many of jQuery methods for UI components Identification
+
+Cypress Architecture
+
+Most testing tools (like Selenium) operate by running outside of the browser and executing remote commands across the network. But Cypress engine directly operates inside the browser. In other words, It is the browser that is executing your test code
+
+This enables Cypress to listen and modify the browser behavior at run time by manipulating DOM and altering Network requests and responses on the fly
+
+Cypress open doors to New Kind of testing with Having ultimate control over your application (front and back)
+
+
+
+Cypress Browser Support:
+
+
+Chrome
+Electron
+Firefox & IE (Under Construction)
+
+
+Cypress Components:
+
+Test Runner
+Dash Board Service
+
+
+
+Course Outcome:
+
+By end of this course, You should be able to Automate any Web App using Cypress
+You will understand how Cypress is Unique to build Non Flaky Stable Automation tests with the help of jQuery
+You can mock network requests and responses with Cypress
+Ability to Design Cypress framework from scratch with all the Testing standards
+
+Integrate Cypress Test Framework to Jenkins for CI/CD
+
+
+
+Navigating to url - visit
+Through command line, Cypress runs in headless in electron
+Update configurations in cypress.json which over rides existing behaviour.
+Cypress supports Css selectors only
+We can see what happened on every step with screenshot and error messages in cypress
+how to handle click, type, text()
+Iterating over the aray of web elements using each
+Cypress is asynchronus in nature and there is no guarantee in sequence of execution, but cypress takes care of it 
+Promise comes with rejection, resolved,pending
+.then()
+Non cypress commands cannot resolve promise by themselves. We need to manually resolve it by then ()
+Aliasing to reuse locators- 
+Cypress auto accepts alerts and pop ups
+Cypress have capability of browser events. window:alert is the event which get fired on alert open
+So you are firing the event through cypress to get access to that alert
+Cypress have ability to manipulate the DOM-
+Yes you can traverse to sibling with next() and it works only on get
+Mouse hover events are not supported in cypres. Alternatively use jquery or force click
