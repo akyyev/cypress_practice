@@ -54,7 +54,8 @@ describe('Seventh test suite', () => {
 
         cy.url().should('include', mainPage+'/windows/new')
         cy.go('back')
-    });
 
+        cy.visit('https://google.com')
+    })
 
 })

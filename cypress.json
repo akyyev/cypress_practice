@@ -2,7 +2,7 @@
   "defaultCommandTimeout": 6000,
   "modifyObstructiveCode": true,
   "experimentalSourceRewriting": true,
-  "chromeWebSecurity": true,
+  "chromeWebSecurity": false,
   "__comment2__": "These configurations are important...",
   "env": {
     "angular_practice_url": "https://rahulshettyacademy.com/angularpractice/",
