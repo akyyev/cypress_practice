@@ -3,8 +3,15 @@ const data = require('../../fixtures/my_example.json')
 describe('End 2 end test suite', function() {
     
 
-    beforeEach(()=> {
+    beforeEach(function() {
         cy.log('I run before every test in every spec file!!!!!!')
+        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+        cy.fixture('my_example').then((data)=>{
+            //here we create global variable that can be used in this class with 'this' keyword
+            this.data = data;
+        }).then(() => {
+            //console.log(this.data); // sync operation gets executed in the beginning, that's why we put it in then block
+        })
       })
 
 
@@ -13,22 +20,18 @@ describe('End 2 end test suite', function() {
         //Make sure you use function(){...} syntax when creating and calling
         cy.log('Runs once before all tests in the block')
         // To get data from json file located under fixtures folder
-        cy.fixture('my_example').then((data)=>{
-            //here we create global variable that can be used in this class with 'this' keyword
-            this.data = data
-        })
+        
     })
 
     it('should behave...', function() {
         cy.log(this.data === undefined)
-        cy.visit('https://rahulshettyacademy.com/angularpractice/')
+       
 
         cy.get('input[name="name"]:nth-child(2)').should('have.attr', 'minlength','2')
 
         // This data is coming from require statement
         cy.get('input[name="name"]:nth-child(2)').type(data.name)
         
-
 
         //This is coming from fixture statement
         cy.get('input[name="email"]').type(this.data.email)
@@ -62,7 +65,10 @@ describe('End 2 end test suite', function() {
         cy.pause()
 
         // Adding phones to our cart from json file object
-        this.data.products.forEach(x=>cy.addPhoneToCart(x))
+        cy.then(function() {
+            console.log(this.data)
+            this.data.products.forEach(x=>cy.addPhoneToCart(x))
+        })
     });
 
 

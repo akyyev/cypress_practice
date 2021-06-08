@@ -7,7 +7,8 @@
     "--comment---":"testHead and testRemoteDashboard are calling test script plus extras",
     "test": "node_modules/.bin/cypress run",
     "testHead": "npm run test -- --headed",
-    "testRemoteDashboard": "npm run test -- --record --key 10edb094-2735-464b-b72d-7b381a2cd5d1 --spec cypress/integration/my_studies/test13_e2e_POM_design_p.js"
+    "testRemoteDashboard": "npm run test -- --record --key 10edb094-2735-464b-b72d-7b381a2cd5d1 --spec cypress/integration/my_studies/test13_e2e_POM_design_p.js",
+    "cy:open": "cypress open"
   },
   "author": "kerki",
   "license": "ISC",
